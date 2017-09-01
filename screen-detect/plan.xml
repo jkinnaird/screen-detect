@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan>
+  <seal>334992f1ce4d4494c73d392ce3d5bb56</seal>
+  <revision>54223741355</revision>
+  <timestamp>2017-08-17T04:00:02+0000</timestamp>
+  <identifier>91640710-56ce-4755-a596-c0464f0cefc2</identifier>
+  <player name="ABN-44444OF-P4">
+    <identifier>30b9163c-9771-4e1c-9459-f05609d116a1</identifier>
+    <type>Scala</type>
+  </player>
+  <content-manager-root>
+    <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager</url>
+  </content-manager-root>
+  <transmit>
+    <content-folders>
+      <folder>
+        <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/data/webdav/defaultnet/content</url>
+      </folder>
+    </content-folders>
+    <job-folders>
+      <folder>
+        <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/data/webdav/defaultnet/files</url>
+      </folder>
+      <folder>
+        <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/data/webdav/defaultnet/updates</url>
+      </folder>
+    </job-folders>
+    <reply>
+      <url>scalasoaphttps://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/services/MonitorService?planStatus</url>
+    </reply>
+  </transmit>
+  <jobs>
+    <job name="Player11-03-02Update">
+      <identifier>5707cdb4-d86c-4249-9283-474f31836a0e</identifier>
+      <timestamp>2017-07-28T02:19:23+0000</timestamp>
+      <tasks>
+        <install-software-update>
+          <file>
+            <name>501.3.2/player_remote_update[55357906500].cab</name>
+            <totalsize>50576975</totalsize>
+            <md5>c58f97e6df5b00119dce0be51c182af2</md5>
+          </file>
+          <execution-states>
+            <state>
+              <identifier>399507462</identifier>
+              <description>Waiting for required files</description>
+              <timestamp>2017-08-10T11:03:03.117-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507463</identifier>
+              <description>Ready to execute this task</description>
+              <timestamp>2017-08-10T11:03:30.966-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507464</identifier>
+              <description>Started execution of this task</description>
+              <timestamp>2017-08-10T11:03:30.967-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507466</identifier>
+              <description>Failed with a non-retryable error set</description>
+              <timestamp>2017-08-10T11:03:32.249-04:00</timestamp>
+              <errors>
+                <error ansi_time="2017-08-10T11:03:32.242-04:00" errorcode="0x0B201803" task="Network Client Maintenance Job Task" catalog="sscommon">
+                  <user>The player network failed to execute a maintenance job, because of an error.  No future attempts will be made.</user>
+                  <supp>Failed to execute a maintenance job Player11-03-02Update, task index 0. The task will not be retried and any subsequent tasks in the job will not be executed.</supp>
+                  <supp>Failed to execute the "Install Software Update" task.</supp>
+                  <tech>The underlying MS-Windows API returned the error 00000020.</tech>
+                  <user>Delete file "D:\Ftproot\InfoChannel_Player_5_Config_and_DATA\Temp\InfoChannel Player 5\icupdate.exe" failed with error code 32, "The process cannot access the file because it is being used by another process. "</user>
+                </error>
+              </errors>
+            </state>
+          </execution-states>
+        </install-software-update>
+        <reboot>
+          <execution-states>
+            <state>
+              <identifier>399507463</identifier>
+              <description>Ready to execute this task</description>
+              <timestamp>2017-08-10T11:03:03.117-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507467</identifier>
+              <description>Stopped because a previous task failed</description>
+              <timestamp>2017-08-10T11:03:32.251-04:00</timestamp>
+            </state>
+          </execution-states>
+        </reboot>
+      </tasks>
+    </job>
+    <job name="Python2711Update">
+      <identifier>5208d253-bf6b-4c3e-806b-79f98983e9ce</identifier>
+      <timestamp>2017-07-28T03:04:31+0000</timestamp>
+      <tasks>
+        <install-software-update>
+          <file>
+            <name>501.3.3/python2711_scala_remote_update[55421435400].cab</name>
+            <totalsize>36053521</totalsize>
+            <md5>af1c97a3661d9a5edaab6c2c61441196</md5>
+          </file>
+          <execution-states>
+            <state>
+              <identifier>399507462</identifier>
+              <description>Waiting for required files</description>
+              <timestamp>2017-08-10T11:03:03.103-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507463</identifier>
+              <description>Ready to execute this task</description>
+              <timestamp>2017-08-10T11:03:14.845-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507464</identifier>
+              <description>Started execution of this task</description>
+              <timestamp>2017-08-10T11:03:14.846-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507468</identifier>
+              <description>Waiting for reboot</description>
+              <timestamp>2017-08-10T11:05:31.692-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507465</identifier>
+              <description>Succeeded executing this task.  The software was successfully rebooted or restarted.</description>
+              <timestamp>2017-08-10T11:08:42.693-04:00</timestamp>
+            </state>
+          </execution-states>
+        </install-software-update>
+        <reboot>
+          <execution-states>
+            <state>
+              <identifier>399507463</identifier>
+              <description>Ready to execute this task</description>
+              <timestamp>2017-08-10T11:03:03.103-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507464</identifier>
+              <description>Started execution of this task</description>
+              <timestamp>2017-08-10T11:08:42.694-04:00</timestamp>
+            </state>
+            <state>
+              <identifier>399507468</identifier>
+              <description>Waiting for reboot</description>
+              <timestamp>2017-08-10T11:08:42.694-04:00</timestamp>
+            </state>
+          </execution-states>
+        </reboot>
+      </tasks>
+    </job>
+  </jobs>
+  <status>
+    <plan-received>2017-08-17T12:17:43.852-04:00</plan-received>
+    <installed-content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_FA_HONDA_ODYSSEY_FRIENDLIERTOEVERYONE_2017_JV[53971919000].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_FA_HONDA_RIDGELINDE_VERSATILE_2017_JV[53971928000].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_FA_HONDA_RIDGELINE_HOME_IMPROVEMENT_2017_FC[53072645800].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_FA_HONDA_RIDGELINE_SPORTS_FANS_2017_FC[53072647400].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_RF_HONDA_CIVIC_TOURING_2017_JV[53582668002].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_RF_HONDA_ODYSSEY_2018_JV[54756930101].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\_DTV_H_DS_RF_HONDA_RIDGELINE_RTLE_2017_JV[52063302802].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_TRANSITION_HONDA_ACCORD_2017_JV[53443495601].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_TRANSITION_HONDA_CIVIC_2017_JV[53443495301].mp4</content>
+      <content>DIGITAL_SIGNAGE_CONTENT\DIGITAL_SIGNAGE_OEM\HONDA\HORIZONTAL\OTHER\H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4</content>
+    </installed-content>
+    <cached-content/>
+    <received-job-files>
+      <file>501.3.2\player_remote_update[55357906500].cab</file>
+      <file>501.3.3\python2711_scala_remote_update[55421435400].cab</file>
+    </received-job-files>
+    <cached-job-files/>
+    <retained-linked-content/>
+  </status>
+  <settings>
+    <health-monitoring>
+      <enable>true</enable>
+      <heartbeat-rate>30</heartbeat-rate>
+      <arrhythmia-list>1, 2, 3, 4, 5, 6, 7, 9, 10, 15, 24, 25, 36, 37, 38, 45, 53, 56, 62, 64, 74, 88, 89, 90, 91, 92, 93, 95, 96, 97, 1000, 1002, 1004, 1006, 1008, 1010, 1012, 10001</arrhythmia-list>
+      <maximum-arrhythmia-rate>15</maximum-arrhythmia-rate>
+      <maximum-arrhythmia-errors>100</maximum-arrhythmia-errors>
+      <maximum-logfile-events>100000</maximum-logfile-events>
+      <enable-logfile-upload>false</enable-logfile-upload>
+      <keep-logfile-days>7</keep-logfile-days>
+      <logfile-destination>
+        <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/data/webdav/defaultnet/receive/logs/30b9163c-9771-4e1c-9459-f05609d116a1</url>
+      </logfile-destination>
+      <heartbeat-destination>
+        <url>scalasoaphttps://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/services/MonitorService?heartbeat</url>
+      </heartbeat-destination>
+    </health-monitoring>
+    <plan-status>
+      <maximum-report-rate>60</maximum-report-rate>
+    </plan-status>
+    <billing>
+      <enable-logfile-upload>false</enable-logfile-upload>
+      <enable-hourly-upload>false</enable-hourly-upload>
+      <keep-logfile-days>7</keep-logfile-days>
+      <logfile-destination>
+        <url>https://%3Fd0fb748b1610f622a4779b7a7a65c818a1f9b2e6bc833301690c63ec546160a702d3%3F@avacmd04.scala.com:44354/ContentManager/data/webdav/defaultnet/receive/billing/30b9163c-9771-4e1c-9459-f05609d116a1</url>
+      </logfile-destination>
+    </billing>
+    <bandwidth-throttling>
+      <enable>false</enable>
+    </bandwidth-throttling>
+    <logging>
+      <netic-level>1</netic-level>
+    </logging>
+    <plan-retrieval>
+      <polling-interval>60</polling-interval>
+    </plan-retrieval>
+    <file-manager>
+      <maximum-downloads>1</maximum-downloads>
+      <keep-unused-files-for>72</keep-unused-files-for>
+      <partition-reserve-space-mb>150</partition-reserve-space-mb>
+    </file-manager>
+  </settings>
+  <play>
+    <displays>
+      <display name="Display 1">
+        <channel>GLOBAL_DSH - Display 1</channel>
+      </display>
+    </displays>
+    <channels>
+      <channel name="GLOBAL_DSH - Display 1">
+        <identifier>593</identifier>
+        <variables>
+          <boolean name="dummy"/>
+        </variables>
+        <timetable>
+          <timeslot>
+            <frameset>
+              <width>1280</width>
+              <height>720</height>
+              <frames>
+                <frame name="Main">
+                  <track>GLOBAL_DSH - Main - 1 - Display 1</track>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>1280</width>
+                  <height>720</height>
+                  <autoscale>FillExact</autoscale>
+                </frame>
+              </frames>
+            </frameset>
+          </timeslot>
+        </timetable>
+      </channel>
+    </channels>
+    <tracks>
+      <track name="GLOBAL_DSH - Main - 1 - Display 1">
+        <identifier>2441</identifier>
+        <triggers>
+          <on-time name="dummy">
+            <playlist>TIME_TRIGGER_RIO_OLYMPICS - Display 1</playlist>
+            <from>2016-08-08T00:00:00</from>
+            <to>2016-08-21T23:59:59</to>
+            <days>sun,mon,tue,wed,thu,fri,sat</days>
+            <time>06:00:00</time>
+            <items-to-pick>all</items-to-pick>
+            <repeat-every-until>01:00:00-22:00:00</repeat-every-until>
+          </on-time>
+        </triggers>
+        <timetable>
+          <timeslot>
+            <playlist>DSH_WRAPPER_PLAYLIST - Display 1</playlist>
+            <from>2015-01-25T06:00:00</from>
+            <daypart>06:00:00-23:00:00</daypart>
+            <priority>10000</priority>
+          </timeslot>
+        </timetable>
+      </track>
+    </tracks>
+    <playlists>
+      <playlist name="DSH_WRAPPER_PLAYLIST - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="ABN_HQ-HONDA_44444_DSH_PLAYLIST - Display 1">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="ABN_HQ-HONDA_44444_DSH_PLAYLIST - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="HOEA4444404DSHCL - Display 1">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="HOEA4444404DSHCL - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_ACCORD_2017_JV[53443495601].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_CIVIC_TOURING_2017_JV[53582668002].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:57.39</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_CIVIC_2017_JV[53443495301].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_SPORTS_FANS_2017_FC[53072647400].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:15.05</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_ODYSSEY_2018_JV[54756930101].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:01:46.94</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_ODYSSEY_FRIENDLIERTOEVERYONE_2017_JV[53971919000].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:30.03</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINDE_VERSATILE_2017_JV[53971928000].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:30.03</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_RIDGELINE_RTLE_2017_JV[52063302802].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:51.65</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_HOME_IMPROVEMENT_2017_FC[53072645800].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:15.05</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <playlist name="DS_GLOBAL_CONTENT - Display 1">
+            <items-to-pick>all</items-to-pick>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="DS_GLOBAL_CONTENT - Display 1">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>2</no-repeats-within-last>
+        <item-list>
+          <playlist name="GENERIC_SEASONAL - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_SEASONAL - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="GENERIC_SEASONAL - Display 1">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_SEASONAL - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="PRESIDENTS_DAY_EVENT - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_DREAMGARAGE - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_FOR_YOU_EVENT - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_MEMORIAL_DAY - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_SUMMER_CLEARANCE - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_HAPPY_DAYS_SALES_EVENT - Display 1">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="PRESIDENTS_DAY_EVENT - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_DREAMGARAGE - Display 1">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_FOR_YOU_EVENT - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_MEMORIAL_DAY - Display 1">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_SUMMER_CLEARANCE - Display 1">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_HAPPY_DAYS_SALES_EVENT - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="TIME_TRIGGER_RIO_OLYMPICS - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="DS_HOLIDAY_OLYMPIC - Display 1">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="DS_HOLIDAY_OLYMPIC - Display 1">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+    </playlists>
+    <content>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_ACCORD_2017_JV[53443495601].mp4">
+        <totalsize>22603088</totalsize>
+        <md5>ed31201fa11a304e1df98c7a61b05eff</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Accord</string>
+          <string name="MediaItem.ModifiedDate">2017-05-19T12:45:53+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Tags">ACCORD</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_CIVIC_TOURING_2017_JV[53582668002].mp4">
+        <totalsize>82157926</totalsize>
+        <md5>ae8708d294d7dd4d809b2bfbfc4c703e</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Civic Touring RF</string>
+          <string name="MediaItem.ModifiedDate">2017-05-12T20:04:19+0000</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Tags">CIVIC,TOURING</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_CIVIC_2017_JV[53443495301].mp4">
+        <totalsize>27224748</totalsize>
+        <md5>f37ec287ac343e62fded10b99bf39425</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Civic Transitions</string>
+          <string name="MediaItem.ModifiedDate">2017-05-18T15:20:48+0000</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Tags">CIVIC</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+        <totalsize>28982862</totalsize>
+        <md5>7e005179af3080a71cb8f6e80b213e3d</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Ridgeline Transitions</string>
+          <string name="MediaItem.ModifiedDate">2017-05-18T15:19:56+0000</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Tags">RIDGELINE</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_SPORTS_FANS_2017_FC[53072647400].mp4">
+        <totalsize>8972158</totalsize>
+        <md5>22d89ce361245a700d30d2ced6f81a33</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Sports Fan FA</string>
+          <string name="MediaItem.ModifiedDate">2016-10-25T16:03:40+0000</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Tags">RIDGELINE,SPORTS,FAN</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_ODYSSEY_2018_JV[54756930101].mp4">
+        <totalsize>33187889</totalsize>
+        <md5>8d1c0e7243d77747e445caca3a2998fb</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2018 Odyssey (RF)</string>
+          <string name="MediaItem.ModifiedDate">2017-05-19T12:47:50+0000</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Tags">ODYSSEY</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_ODYSSEY_FRIENDLIERTOEVERYONE_2017_JV[53971919000].mp4">
+        <totalsize>25738723</totalsize>
+        <md5>1ebcceeb4ec6344418ba63a95bba2fa0</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Odyssey Friendlier To Everyone FA</string>
+          <string name="MediaItem.ModifiedDate">2017-02-08T19:25:52+0000</string>
+          <string name="MediaItem.Tags">ODYSSEY,FRIENDLIER,TO,EVERYONE</string>
+          <string name="MediaItem.Subcategory">FA</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINDE_VERSATILE_2017_JV[53971928000].mp4">
+        <totalsize>33841557</totalsize>
+        <md5>b43e969cdbdd0da53dfcee7a7c96f428</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Versatile FA</string>
+          <string name="MediaItem.ModifiedDate">2017-02-08T19:24:41+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Subcategory">FA</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Tags">RIDGELINE,VERSATILE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_RIDGELINE_RTLE_2017_JV[52063302802].mp4">
+        <totalsize>70954657</totalsize>
+        <md5>aadbae79884b27f756aeedb099d3e435</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Ridgeline RTL-E RF</string>
+          <string name="MediaItem.ModifiedDate">2017-05-12T21:21:46+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Tags">RIDGELINE,RTLE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_HOME_IMPROVEMENT_2017_FC[53072645800].mp4">
+        <totalsize>10315438</totalsize>
+        <md5>fad3d220fa87557eb8a2dfa2bf402fb7</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Home Improvement FA</string>
+          <string name="MediaItem.ModifiedDate">2016-10-25T16:03:11+0000</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Tags">RIDGELINE,HOME,IMPROVEMENT</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+    </content>
+  </play>
+  <license>
+    <values>
+      <created-on>2017-08-17T04:00:02</created-on>
+      <scalaadvantage-expires>2017-12-31T23:59:59</scalaadvantage-expires>
+      <playback-expires>2017-09-16T04:00:02</playback-expires>
+      <use-expires/>
+      <player-type>Scala PC Player</player-type>
+      <options>
+        <h264-licensed>TRUE</h264-licensed>
+      </options>
+      <mac-address>24-1c-04-06-db-47</mac-address>
+      <id>30b9163c-9771-4e1c-9459-f05609d116a1-00000000054223741355</id>
+    </values>
+    <signature>4F2CCC9611F4E1823639730367A2545DCB703B50F3B0DE1EA2E9342BFAF1BD49B509F811F068BF9A052EFE6989AAC0B4CA304B572BE68A901E3207439ED868DFB0F10CD12482399248AB063CB34DEC0F5B66F59473DF778F066689B2263F1BD61FADDC3C3804EE5DC959433D46928A8A84ECEB176398148F4883BE2283399DBDCDE61AE536DBE84871A0D3F1251DC2E701BE2CF4F599F4435739DD9BCD23F4825EB9DB9CADC26FEAB810E51377A786A3CD181358605EE673F35DAFBCF6CD2BFAEED0B7141D03297DFC0E38E5E7C2FC70212CA051F83576D9E5F8C692FBCF7D7A1F064CDEC5EC5F049FD66811605235FD1D0A407E07290A727B1AB25B6A42513A</signature>
+  </license>
+  <metadata>
+    <entry name="Player.Account_Number" value="44444" type="string"/>
+    <entry name="Player.Customer_Description" value="Showroom Channel
+" type="string"/>
+    <entry name="Player.Location_ID" value="HOEA4444404DSHCL" type="string"/>
+    <entry name="Player.OEM" value="HO" type="string"/>
+    <entry name="Player.Status" value="Active" type="string"/>
+    <entry name="Player.ABN_Live_Template_Name" value="" type="string"/>
+    <entry name="Player.GM_ZONE_ID" value="" type="string"/>
+    <entry name="Player.Co-Op_Tier" value="" type="string"/>
+    <entry name="Player.Videowall_Configuration" value="" type="string"/>
+    <entry name="Player.Group" value="" type="string"/>
+    <entry name="Player.GMDS_Region" value="" type="string"/>
+    <entry name="Player.GMDS_LMA" value="" type="string"/>
+    <entry name="Player.State" value="" type="string"/>
+    <entry name="Player.OPT_OUT_TT" value="" type="string"/>
+    <entry name="Player.OPT_IN_PSA" value="" type="string"/>
+    <entry name="Player.OPT_OUT_JT" value="" type="string"/>
+    <entry name="Player.OPT_OUT_ABN" value="" type="string"/>
+    <entry name="Player.OPT_IN_TS" value="" type="string"/>
+    <entry name="Player.OPT_IN_VS" value="" type="string"/>
+    <entry name="Player.Notification" value="false" type="boolean"/>
+    <entry name="Player.OPT_IN_FT" value="" type="string"/>
+    <entry name="Player.OPT_OUT_GT" value="" type="string"/>
+    <entry name="Player.OPT_IN_WA" value="" type="string"/>
+    <entry name="Player.OPT_OUT_FA" value="" type="string"/>
+    <entry name="Player.ABN_Now" value="false" type="boolean"/>
+    <entry name="Player.OPT_IN_SP" value="" type="string"/>
+    <entry name="Player.Customer_Store_ID" value="" type="string"/>
+    <entry name="Player.ABN_Live_Custom_Template" value="false" type="boolean"/>
+    <entry name="Player.OPT_IN_JT" value="" type="string"/>
+    <entry name="Player.OPT_IN_TT" value="" type="string"/>
+    <entry name="Player.OPT_OUT_COOP" value="" type="string"/>
+    <entry name="Player.Send_Logs_to_Central_HQ" value="false" type="boolean"/>
+    <entry name="Player.PTTV" value="false" type="boolean"/>
+    <entry name="Player.OPT_OUT_DEALERCONTENT" value="" type="string"/>
+    <entry name="Player.Script_Debugging" value="false" type="boolean"/>
+    <entry name="Player.ABN_Live_Deliveryboard" value="false" type="boolean"/>
+    <entry name="Player.Live_Peers" value="" type="string"/>
+    <entry name="Player.VOD_ENABLED" value="false" type="boolean"/>
+    <entry name="Player.Clear_LocalStorage" value="false" type="boolean"/>
+    <entry name="Player.Live_Allow_Broadcasts" value="false" type="boolean"/>
+    <entry name="Player.OPT_OUT_SI" value="" type="string"/>
+    <entry name="Player.GMDS_BAC" value="" type="string"/>
+    <entry name="Player.Postal_Code" value="" type="string"/>
+    <entry name="Player.ChannelDisplay1_Channel" value="593" type="integer"/>
+    <entry name="Player.PlayerName" value="ABN-44444OF-P4" type="string"/>
+    <entry name="Player.PlayerGroup" value=";Customer Players;EST Update;" type="string"/>
+  </metadata>
+  <playable>
+    <displays>
+      <display name="Display 1">
+        <channel>GLOBAL_DSH - Display 1</channel>
+      </display>
+    </displays>
+    <channels>
+      <channel name="GLOBAL_DSH - Display 1">
+        <identifier>593</identifier>
+        <variables>
+          <boolean name="dummy"/>
+        </variables>
+        <timetable>
+          <timeslot>
+            <frameset>
+              <width>1280</width>
+              <height>720</height>
+              <frames>
+                <frame name="Main">
+                  <track>GLOBAL_DSH - Main - 1 - Display 1</track>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>1280</width>
+                  <height>720</height>
+                  <autoscale>FillExact</autoscale>
+                </frame>
+              </frames>
+            </frameset>
+          </timeslot>
+        </timetable>
+      </channel>
+    </channels>
+    <tracks>
+      <track name="GLOBAL_DSH - Main - 1 - Display 1">
+        <identifier>2441</identifier>
+        <triggers>
+          <on-time name="dummy">
+            <playlist>TIME_TRIGGER_RIO_OLYMPICS - Display 1[54223741355]</playlist>
+            <from>2016-08-08T00:00:00</from>
+            <to>2016-08-21T23:59:59</to>
+            <days>sun,mon,tue,wed,thu,fri,sat</days>
+            <time>06:00:00</time>
+            <items-to-pick>all</items-to-pick>
+            <repeat-every-until>01:00:00-22:00:00</repeat-every-until>
+          </on-time>
+        </triggers>
+        <timetable>
+          <timeslot>
+            <playlist>DSH_WRAPPER_PLAYLIST - Display 1[54223741355]</playlist>
+            <from>2015-01-25T06:00:00</from>
+            <daypart>06:00:00-23:00:00</daypart>
+            <priority>10000</priority>
+          </timeslot>
+        </timetable>
+      </track>
+    </tracks>
+    <playlists>
+      <playlist name="ABN_HQ-HONDA_44444_DSH_PLAYLIST - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="HOEA4444404DSHCL - Display 1[54223741355]">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="DSH_WRAPPER_PLAYLIST - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="ABN_HQ-HONDA_44444_DSH_PLAYLIST - Display 1[54223741355]">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="DS_GLOBAL_CONTENT - Display 1[54223741355]">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>2</no-repeats-within-last>
+        <item-list>
+          <playlist name="GENERIC_SEASONAL - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_SEASONAL - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="DS_HOLIDAY_OLYMPIC - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="GENERIC_SEASONAL - Display 1[54223741355]">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HOEA4444404DSHCL - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_ACCORD_2017_JV[53443495601].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_CIVIC_TOURING_2017_JV[53582668002].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:57.39</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_CIVIC_2017_JV[53443495301].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_SPORTS_FANS_2017_FC[53072647400].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:15.05</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_ODYSSEY_2018_JV[54756930101].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:01:46.94</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_ODYSSEY_FRIENDLIERTOEVERYONE_2017_JV[53971919000].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:30.03</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINDE_VERSATILE_2017_JV[53971928000].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:30.03</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_RIDGELINE_RTLE_2017_JV[52063302802].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:51.65</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:41.40</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <content name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_HOME_IMPROVEMENT_2017_FC[53072645800].mp4">
+            <audit>0</audit>
+            <max-expected-duration>00:00:15.05</max-expected-duration>
+            <page-backdrop-opacity>100</page-backdrop-opacity>
+          </content>
+          <playlist name="DS_GLOBAL_CONTENT - Display 1[54223741355]">
+            <items-to-pick>all</items-to-pick>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="HONDA_DREAMGARAGE - Display 1[54223741355]">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_FOR_YOU_EVENT - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_HAPPY_DAYS_SALES_EVENT - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_MEMORIAL_DAY - Display 1[54223741355]">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="HONDA_SEASONAL - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="PRESIDENTS_DAY_EVENT - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_DREAMGARAGE - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_FOR_YOU_EVENT - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_MEMORIAL_DAY - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_SUMMER_CLEARANCE - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+          <playlist name="HONDA_HAPPY_DAYS_SALES_EVENT - Display 1[54223741355]">
+            <items-to-pick>1</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+      <playlist name="HONDA_SUMMER_CLEARANCE - Display 1[54223741355]">
+        <pick-policy>shuffle</pick-policy>
+        <no-repeats-within-last>0</no-repeats-within-last>
+        <item-list/>
+      </playlist>
+      <playlist name="PRESIDENTS_DAY_EVENT - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list/>
+      </playlist>
+      <playlist name="TIME_TRIGGER_RIO_OLYMPICS - Display 1[54223741355]">
+        <pick-policy>sequence</pick-policy>
+        <item-list>
+          <playlist name="DS_HOLIDAY_OLYMPIC - Display 1[54223741355]">
+            <items-to-pick>all</items-to-pick>
+            <valid>
+              <days>sun,mon,tue,wed,thu,fri,sat</days>
+            </valid>
+          </playlist>
+        </item-list>
+      </playlist>
+    </playlists>
+    <content>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_ODYSSEY_FRIENDLIERTOEVERYONE_2017_JV[53971919000].mp4">
+        <totalsize>25738723</totalsize>
+        <md5>1ebcceeb4ec6344418ba63a95bba2fa0</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Odyssey Friendlier To Everyone FA</string>
+          <string name="MediaItem.ModifiedDate">2017-02-08T19:25:52+0000</string>
+          <string name="MediaItem.Tags">ODYSSEY,FRIENDLIER,TO,EVERYONE</string>
+          <string name="MediaItem.Subcategory">FA</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINDE_VERSATILE_2017_JV[53971928000].mp4">
+        <totalsize>33841557</totalsize>
+        <md5>b43e969cdbdd0da53dfcee7a7c96f428</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Versatile FA</string>
+          <string name="MediaItem.ModifiedDate">2017-02-08T19:24:41+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Subcategory">FA</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Tags">RIDGELINE,VERSATILE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_HOME_IMPROVEMENT_2017_FC[53072645800].mp4">
+        <totalsize>10315438</totalsize>
+        <md5>fad3d220fa87557eb8a2dfa2bf402fb7</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Home Improvement FA</string>
+          <string name="MediaItem.ModifiedDate">2016-10-25T16:03:11+0000</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Tags">RIDGELINE,HOME,IMPROVEMENT</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_FA_HONDA_RIDGELINE_SPORTS_FANS_2017_FC[53072647400].mp4">
+        <totalsize>8972158</totalsize>
+        <md5>22d89ce361245a700d30d2ced6f81a33</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Ridgeline Sports Fan FA</string>
+          <string name="MediaItem.ModifiedDate">2016-10-25T16:03:40+0000</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Tags">RIDGELINE,SPORTS,FAN</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_CIVIC_TOURING_2017_JV[53582668002].mp4">
+        <totalsize>82157926</totalsize>
+        <md5>ae8708d294d7dd4d809b2bfbfc4c703e</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Civic Touring RF</string>
+          <string name="MediaItem.ModifiedDate">2017-05-12T20:04:19+0000</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Tags">CIVIC,TOURING</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_ODYSSEY_2018_JV[54756930101].mp4">
+        <totalsize>33187889</totalsize>
+        <md5>8d1c0e7243d77747e445caca3a2998fb</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2018 Odyssey (RF)</string>
+          <string name="MediaItem.ModifiedDate">2017-05-19T12:47:50+0000</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Tags">ODYSSEY</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_RF_HONDA_RIDGELINE_RTLE_2017_JV[52063302802].mp4">
+        <totalsize>70954657</totalsize>
+        <md5>aadbae79884b27f756aeedb099d3e435</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Ridgeline RTL-E RF</string>
+          <string name="MediaItem.ModifiedDate">2017-05-12T21:21:46+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Tags">RIDGELINE,RTLE</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Subcategory">RF</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_ACCORD_2017_JV[53443495601].mp4">
+        <totalsize>22603088</totalsize>
+        <md5>ed31201fa11a304e1df98c7a61b05eff</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">2017 Accord</string>
+          <string name="MediaItem.ModifiedDate">2017-05-19T12:45:53+0000</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Tags">ACCORD</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_CIVIC_2017_JV[53443495301].mp4">
+        <totalsize>27224748</totalsize>
+        <md5>f37ec287ac343e62fded10b99bf39425</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Civic Transitions</string>
+          <string name="MediaItem.ModifiedDate">2017-05-18T15:20:48+0000</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <string name="MediaItem.Tags">CIVIC</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+      <video name="DIGITAL_SIGNAGE_CONTENT/DIGITAL_SIGNAGE_OEM/HONDA/HORIZONTAL/OTHER/H_DS_TRANSITION_HONDA_RIDGELINE_2017_JV[53443512801].mp4">
+        <totalsize>28982862</totalsize>
+        <md5>7e005179af3080a71cb8f6e80b213e3d</md5>
+        <volume>255</volume>
+        <metadata>
+          <string name="MediaItem.Description">Ridgeline Transitions</string>
+          <string name="MediaItem.ModifiedDate">2017-05-18T15:19:56+0000</string>
+          <string name="MediaItem.Target_Channel">DIGITAL_SIGNAGE</string>
+          <string name="MediaItem.Subcategory">DS</string>
+          <string name="MediaItem.Asset_Type">DS_VIDEO</string>
+          <string name="MediaItem.Tags">RIDGELINE</string>
+          <string name="MediaItem.Orientation">HORIZONTAL</string>
+          <string name="MediaItem.OEM">HONDA</string>
+          <boolean name="MediaItem.Contains_Vehicle">true</boolean>
+          <string name="MediaItem.Category">OTHER</string>
+          <string name="MediaItem.Show">
+          </string>
+          <string name="MediaItem.Content_Type">
+          </string>
+          <string name="MediaItem.GM_Content_Package">
+          </string>
+          <string name="MediaItem.GM_ZONE_ID">
+          </string>
+          <string name="MediaItem.Videowall_Configuration">
+          </string>
+          <string name="MediaItem.Dynamic_Type">
+          </string>
+          <string name="MediaItem.Menuboard_Configuration">
+          </string>
+          <string name="MediaItem.Source">
+          </string>
+          <string name="MediaItem.Spot_Name">
+          </string>
+          <boolean name="MediaItem.Contains_Audio">false</boolean>
+          <boolean name="MediaItem.Timeliness">false</boolean>
+          <boolean name="MediaItem.Origin Below Output Resolution">false</boolean>
+          <boolean name="MediaItem.GM_Compliant">false</boolean>
+          <string name="MediaItem.Account_Number">
+          </string>
+          <integer name="MediaItem.Time">0</integer>
+          <integer name="MediaItem.Display_Interval">0</integer>
+          <integer name="MediaItem.Max_Elements">0</integer>
+          <string name="MediaItem.Dynamic_Data_URL">
+          </string>
+          <string name="MediaItem.Verboten">
+          </string>
+          <string name="MediaItem.Dealer_Asset_Url">
+          </string>
+          <boolean name="MediaItem.GM_DTAP_Approved">false</boolean>
+        </metadata>
+      </video>
+    </content>
+  </playable>
+</plan>
