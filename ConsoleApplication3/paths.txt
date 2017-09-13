@@ -1,0 +1,5 @@
+D:\FTProot\InfoChannel_Player_5_Config_and_DATA\Application Data\Logs\logs\20170824.log
+D:\FTProot\InfoChannel_Player_5_Config_and_DATA\Application Data\Logs\bill20170824.log
+D:\FTProot\InfoChannel_Player_5_Config_and_DATA\Application Data\Logs\IC.log
+D:\FTProot\InfoChannel_Player_5_Config_and_DATA\Application Data\Network\metadata[####].xml
+D:\FTProot\InfoChannel_Player_5_Config_and_DATA\Application Data\Network\plan.xml
