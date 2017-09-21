@@ -152,13 +152,14 @@ namespace ConsoleApplication3
 
         static void performanceCounter()
         {
-            DateTime init = DateTime.Now;
-            DateTime current = DateTime.Now;
-            TimeSpan difference;
+            DateTime init = DateTime.Now;       //get time this thread started
+            DateTime current = DateTime.Now;    //get current time
+            TimeSpan difference;                //holds difference between current and init time
 
-            string activeNICname = "";
-            int activeNICindex = 0;
-            int indexSearcher = 0;
+            bool activeConnection = false;      //if there is an active internet
+            string activeNICname = "";          //holds NIC name with the active connection
+            int activeNICindex = 0;             //holds the index of the active internet connection
+            int indexSearcher = 0;              //holds index off NIC that is being checked
             PerformanceCounterCategory nicCategory = new PerformanceCounterCategory("Network Interface");
             foreach (string name in nicCategory.GetInstanceNames())
             {
@@ -166,32 +167,42 @@ namespace ConsoleApplication3
                 {
                     if (ni.OperationalStatus == OperationalStatus.Up && name == ni.Description.ToString())
                     {
+                        activeConnection = true;
                         activeNICname = name;
                         activeNICindex = indexSearcher;
                     }
                     indexSearcher++;
                 }
             }
-            PerformanceCounter bytesSent = new PerformanceCounter("Network Interface", "Bytes Sent/sec", activeNICname);
-            PerformanceCounter bytesRecvd = new PerformanceCounter("Network Interface", "Bytes Received/sec", activeNICname);
 
-            PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-            PerformanceCounter memCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");
-            PerformanceCounter diskCounter = new PerformanceCounter("PhysicalDisk", "% Disk Time", "_Total");
             string path = @"D:\BATS\\metrics.log";      //change
             //string path = @"C:\Users\jkinnaird\Documents\Visual Studio 2015\Projects\ConsoleApplication3\metrics.log";
-            using (System.IO.StreamWriter metrics = new System.IO.StreamWriter(path))
+
+            PerformanceCounter bytesSent = null; PerformanceCounter bytesRecvd = null;                          //declare network performance counters
+            try { bytesSent = new PerformanceCounter("Network Interface", "Bytes Sent/sec", activeNICname); }   //try to initialize outgoing network counter
+            catch { using (StreamWriter metrics = File.AppendText(path)) { metrics.WriteLine("No detected internet connection. Cannot get outbound network activity."); } }
+            try { bytesRecvd = new PerformanceCounter("Network Interface", "Bytes Received/sec", activeNICname); }  //try to initialize incoming network counter
+            catch { using (StreamWriter metrics = File.AppendText(path)) { metrics.WriteLine("No detected internet connection. Cannot get outbound network activity."); } }
+
+            PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");  //declare and init processor performance counter
+            PerformanceCounter memCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");       //declare and init memory performance counter
+            PerformanceCounter diskCounter = new PerformanceCounter("PhysicalDisk", "% Disk Time", "_Total");   //declare and init disk performance counter
+            
+            using (StreamWriter metrics = File.AppendText(path))
             {
                 do
                 {
-                    current = DateTime.Now;
-                    metrics.WriteLine(current + "\tCPU - " + cpuCounter.NextValue());
-                    metrics.WriteLine("\t\t\tMemory - " + memCounter.NextValue());
-                    metrics.WriteLine("\t\t\tDisk - " + diskCounter.NextValue());
-                    metrics.WriteLine("\t\t\tKB sent - " + bytesSent.NextValue() / 1024);
-                    metrics.WriteLine("\t\t\tKB recvd - " + bytesRecvd.NextValue() / 1024);
-                    metrics.WriteLine("");
-                    difference = current - init;
+                    current = DateTime.Now;             //get current time
+                    metrics.WriteLine(current + "\tCPU - " + cpuCounter.NextValue());   //output time and cpu time
+                    metrics.WriteLine("\t\t\tMemory - " + memCounter.NextValue());      //output memory usage
+                    metrics.WriteLine("\t\t\tDisk - " + diskCounter.NextValue());       //output disk usage
+                    if (activeConnection)               //if there is an internet connection
+                    {
+                        metrics.WriteLine("\t\t\tKB sent - " + bytesSent.NextValue() / 1024);   //output outbound network activity
+                        metrics.WriteLine("\t\t\tKB recvd - " + bytesRecvd.NextValue() / 1024); //output inbound network activity
+                    }
+                    metrics.WriteLine("");              //line break
+                    difference = current - init;        //calculate how long thread has been running
                     metrics.Flush();
                     Thread.Sleep(500);
                 } while (difference.Minutes == 0);
@@ -277,15 +288,17 @@ namespace ConsoleApplication3
                 for (int p = 0; p < 5; p++)     //check 5 points
                 {
                     //Console.WriteLine("point: " + p);
-                    bool black = true;
+                    bool[,] black = new bool[2,15];
+                    for (int i = 0; i < 15; i++) { black[0, i] = false; black[1, i] = false; }  //all pixels assumed not black initially
+
                     for (int d = 0; d < 2; d++)
                     {
                         for (int pi = 0; pi < 15; pi++)
                         {
-                            if (d == 0) { pixel = (int)GetPixel(dc, points[p, 0], points[p, 1] + pi - 7); }
-                            else { pixel = (int)GetPixel(dc, points[p, 0] + pi - 7, points[p, 1]); }
+                            if (d == 0) { pixel = (int)GetPixel(dc, points[p, 0], points[p, 1] + pi - 7); }     //since array starts at the middle of the point, offset array values to go from left to right
+                            else { pixel = (int)GetPixel(dc, points[p, 0] + pi - 7, points[p, 1]); }            //since array starts at the middle of the point, offset array values to go from top to bottom
 
-                            Color color = Color.FromArgb((int)(pixel & 0x000000FF),
+                            Color color = Color.FromArgb((int)(pixel & 0x000000FF),                             //parse rgb values from hex color value
                                 (int)(pixel & 0x0000FF00) >> 8,
                                 (int)(pixel & 0x00FF0000) >> 16);
                             byte r, g, b;
@@ -293,14 +306,23 @@ namespace ConsoleApplication3
                             g = color.G;
                             b = color.B;
 
-                            if (r >= 10 && g >= 10 && b >= 10) { black = false; }   //if pixel is not mostly black, region is not black
+                            if (r <= 10 && g <= 10 && b <= 10) { black[d,pi] = true; }   //if pixel is mostly black, set pixel to black
 
                             player.values[p, d, pi, 0, pass] = (int)r;
                             player.values[p, d, pi, 1, pass] = (int)g;
                             player.values[p, d, pi, 2, pass] = (int)b;
                         }
                     }
-                    player.isBlack[p, pass] = black;
+                    //check if this point was black
+                    bool pointIsBlack = true;
+                    for (int d=0; d<2; d++)
+                    {
+                        for(int pi=0; pi<15; pi++)
+                        {
+                            if (black[d, pi] == false) { pointIsBlack = false; }
+                        }
+                    }
+                    player.isBlack[p, pass] = pointIsBlack; //store if this point was black
                 }
                 if (pass < 3) Thread.Sleep(15000);    //sleep 15 seconds between passes
             }
@@ -602,7 +624,7 @@ namespace ConsoleApplication3
             hour = playerTime.Hour;         //update hour of day
             do                              //outer loop is to keep the thread running even outside of content hours
             {
-                if (hour == 1) { garbageCollection(); }
+                if (hour == 0) { garbageCollection(); } //clean up old logs after midnight
                 while (hour >= 6 && hour < 22)  //while content is scheduled, continuously check the screen.
                 {
                     playerTime = DateTime.Now;      //update time
