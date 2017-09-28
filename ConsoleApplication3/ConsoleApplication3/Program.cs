@@ -7,6 +7,7 @@ using System.Threading;                 //Sleep
 using System.Windows.Forms;             //Screen
 using System.Management;                //Managementobject, managementobjectsearcher, getpropertyvalue. Used for detecting EDID.
 using System.Net.NetworkInformation;
+using System.Drawing.Imaging;
 //using System.Net;                       //Web client
 
 namespace ConsoleApplication3
@@ -24,7 +25,7 @@ namespace ConsoleApplication3
 
         static void garbageCollection()     //deletes old logs
         {
-            string zipPath = @"D:\BATS\Logs";   //working directory
+            string zipPath = @"D:\BATS\Logs";   //logs storage directory
             string eventPath = @"D:\BATS";      //source directory for logs
             DateTime current = DateTime.Now;    //get current time
             DateTime file;                      //holds creation time of file
@@ -59,7 +60,7 @@ namespace ConsoleApplication3
 
         static void reboot()
         {
-            //Process.Start("shutdown", "/r /c "BATS reboot" /t 0");
+            Process.Start("shutdown.exe", "-r -t 0");
         }   //reboot player
 
         static void uploadFiles()
@@ -188,7 +189,7 @@ namespace ConsoleApplication3
             PerformanceCounter memCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");       //declare and init memory performance counter
             PerformanceCounter diskCounter = new PerformanceCounter("PhysicalDisk", "% Disk Time", "_Total");   //declare and init disk performance counter
             
-            using (StreamWriter metrics = File.AppendText(path))
+            using (StreamWriter metrics = new StreamWriter(path))
             {
                 do
                 {
@@ -211,9 +212,6 @@ namespace ConsoleApplication3
 
         static player getData(player player)
         {
-            IntPtr dc = GetWindowDC(GetDesktopWindow());
-            int pixel = 0;
-
             int[,] points = new int[5, 2];
             /*int xQuad = player.getxRes() / 4;       //divide x axis into 4 areas
             int yQuad = player.getyRes() / 4;       //divide y axis into 4 areas
@@ -284,6 +282,8 @@ namespace ConsoleApplication3
             metrics.Start();                                        //start the thread
             for (int pass = 0; pass < 4; pass++)   //run 4 passes in 1 minute
             {
+                IntPtr dc = GetWindowDC(GetDesktopWindow());
+                int pixel = 0;
                 Console.WriteLine("pass: " + pass);
                 for (int p = 0; p < 5; p++)     //check 5 points
                 {
@@ -382,8 +382,25 @@ namespace ConsoleApplication3
             return edid;
         }   //check for active display
 
+        static void getScreenShot()
+        {
+            //Create a new bitmap.
+            var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, PixelFormat.Format32bppArgb);
+
+            // Create a graphics object from the bitmap.
+            var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
+
+            // Take the screenshot from the upper left corner to the right bottom corner.
+            gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+
+            // Save the screenshot to the specified path that the user has chosen.
+            if (File.Exists(@"D:\BATS\Temp\Screenshot1.png")) { bmpScreenshot.Save(@"D:\BATS\Temp\Screenshot2.png", ImageFormat.Png); }
+            else { bmpScreenshot.Save(@"D:\BATS\Temp\Screenshot1.png", ImageFormat.Png); }
+        }
+
         static void foundError(bool frozen, bool black, bool edid, bool scala, bool transmission, player cPlayer)
         {
+            getScreenShot();
             string errorCode = "";
             if (frozen) { errorCode = errorCode + "1"; }
             else { errorCode = errorCode + "0"; }
@@ -429,11 +446,11 @@ namespace ConsoleApplication3
                                 {
                                     if (pi == 0)
                                     {
-                                        if (c == 0) { error.Write("r - "); }
+                                        if (c == 0) { error.Write(" r - "); }
                                         if (c == 1) { error.Write("\r\n"); error.Write(" g - "); }
                                         if (c == 2) { error.Write("\r\n"); error.Write(" b - "); }
                                     }
-                                    error.Write(cPlayer.values[p, d, pi, c, pass]);
+                                    error.Write(cPlayer.values[p, d, pi, c, pass] + " ");
                                 }
                             }
                         }
@@ -627,6 +644,7 @@ namespace ConsoleApplication3
                 if (hour == 0) { garbageCollection(); } //clean up old logs after midnight
                 while (hour >= 6 && hour < 22)  //while content is scheduled, continuously check the screen.
                 {
+                    getScreenShot();
                     playerTime = DateTime.Now;      //update time
                     hour = playerTime.Hour;         //update hour of day
                     cPlayer = getData(cPlayer);             //check screen and store data
@@ -647,6 +665,7 @@ namespace ConsoleApplication3
                     else if (File.Exists(metricsPath))
                     {
                         File.Delete(metricsPath);   //otherwise delete the metrics log
+                        if (File.Exists(@"D:\BATS\Temp\Screenshot1.png")) { File.Delete(@"D:\BATS\Temp\Screenshot1.png"); }
                     }
                     Thread.Sleep(60000);            //wait 1 minute before the next check
                     playerTime = DateTime.Now;      //update time
